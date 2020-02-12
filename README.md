@@ -1,5 +1,5 @@
 # Knowledge Base
-## Remote Desktop (RDP) Connection Issues
+## Remote Desktop Protocol (RDP) Connection Issues
 If you experience connectivity issues when using RDP, such as RDP immediately disconnecting after logon or the RDP connection freezing, a change to the MTU size can potentially help solved the issue.
 
 Run the following command by from an elevated command prompt:
