@@ -27,5 +27,6 @@ Azure Multi-factor Auth Client
 
 Azure Multi-factor Auth Connector
 
+The screenshots below show the changes that need to be made.
 
 ![](https://github.com/mbnarayn/KnowledgeBase/blob/master/NPS%20Extension%20for%20Azure%20MFA.png)
