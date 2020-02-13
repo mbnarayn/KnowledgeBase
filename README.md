@@ -58,7 +58,7 @@ Cannot connect to the Citrix XenApp server.Can't assign requested address
 
 To resolve this issue ensure that the WTR definitions on the Symantec client are updated to 10/16/2019 r100 or newer. If for some reason the WTR definition fail to update try reinstalling the Symantec client or upgrade to a newer version.
 ***
-## Combine text from two or more cells into one cell
+## Combine text from two or more cells in Microsoft Excel into one cell
 It is possible to combine data from multiple cells into a single cell using the Ampersand symbol (&) or the CONCAT function.
 
 ### Combine data with the Ampersand symbol (&)
