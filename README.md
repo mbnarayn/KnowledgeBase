@@ -47,7 +47,7 @@ It is probably best to handle all non MFA requests via a different NPS server. H
 ## Citrix Clients Fail to Connect with Symantec Web Security Serivice (WSS) Proxy or Web Traffic Redirection
 Citrix Receiver client, and Citrix Workspace connections fail when the computer is configured to use the Web Security Service (WSS) through the Symantec Endpoint Protection (SEP) client Web Traffic Redirection (WTR) feature. The cause is Citrix client connections sent through the WSS via WTR contain authentication header information that the Citrix server may reject.
 
-You may get one of the errors below or something similar
+You may get one of the errors below or something similar:
 
 > Unable to launch your application. Contact your help desk with the following information:
 Cannot connect to the Citrix XenApp server.Can't assign requested address
