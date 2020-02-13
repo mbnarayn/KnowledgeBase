@@ -34,13 +34,15 @@ The screenshots below show the changes that need to be made.
 ## Bypass MFA for Authentication Requests from Specific Sources on NPS Server with NPS Extension for Azure MFA
 It is important to understand that the ‘NPS Extension for MFA’ is designed to take-over all requests that are handled by the MFA server, meaning those requests that can’t support MFA will simply fail. There is isn't a method of skipping MFA via the network policies. To overcome this restriction we have to make a registry change to whitelist the IP addresses of all devices where the service request originates (such as a VPN server or Wi-Fi Access Point), with this whitelist in place, authentication requests originating from these sources will automatically bypass the MFA extension.
 
-To configure an IP allowed list, go to HKLM\SOFTWARE\Microsoft\AzureMfa and configure the following registry value:
+To configure an MFA bypass list, go to HKLM\SOFTWARE\Microsoft\AzureMfa and configure the following registry value:
 
 Name: IP_WHITELIST
 Type: string
 Value: 192.168.1.1;192.168.1.2
 
 Replace IP addresses in the above examples with the IP addresses of your devices (RADIUS Client) from which the requests originate.
+
+It is probably best to handle all non MFA requests via a different NPS server. However, if that is not an option this method is a decent alternative.
 ***
 
 
