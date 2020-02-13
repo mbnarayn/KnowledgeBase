@@ -23,9 +23,8 @@ The error appears in the Microsoft-AzureMfa-AuthZ/AuthZAdminCh Log on Event View
 
 To resolve this error navigate to Azure Active Directory > Enterprise Applications on the Azure Portal, change the Application Type dropdown to "All Applicaitions" and find the below applications. Both applications will have their properties set to No for the attribute "Enabled for users to sign-in", changing this to yes for both applications will resolve this issue.
 
-Azure Multi-factor Auth Client
-
-Azure Multi-factor Auth Connector
+* Azure Multi-factor Auth Client
+* Azure Multi-factor Auth Connector
 
 The screenshots below show the changes that need to be made.
 
