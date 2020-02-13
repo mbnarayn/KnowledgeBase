@@ -94,6 +94,8 @@ The example below adds a space between the cell values:
 ```
 =CONCAT(A21," ",B21, " ",C21," ",D21," ",E21)
 ```
+***
+
 
 
 
