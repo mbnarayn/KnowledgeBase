@@ -1,4 +1,5 @@
 # Knowledge Base
+***
 ## Remote Desktop Protocol (RDP) Connection Issues
 If you experience connectivity issues when using RDP, such as RDP immediately disconnecting after logon or the RDP connection freezing, a change to the MTU size can potentially help solved the issue.
 
@@ -11,7 +12,7 @@ Replace "WiFi with the name of the network interface. This can be obtained by ru
 ```
 netsh interface ipv4 show interface
 ```
-
+***
 ## Authentication Issues with NPS Extension for Azure MFA on NPS Server
 
 Microsoft documentation around the installation and configuration of NPS Extension for Azure MFA appears to be missing a couple of steps. This results in an error when attempting to request MFA authorisation for Azure.
