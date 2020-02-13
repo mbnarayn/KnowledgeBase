@@ -56,7 +56,7 @@ Cannot connect to the Citrix XenApp server.Can't assign requested address
 
 > Unable to connect to the server. Contact your system administrator with the following error: Socket operation on non-socket (Socket Error 10038)
 
-To resolve this issue ensure that the WTR definitions on the Symantec client are updated to 10/16/2019 r100 or newer. If for some reason the WTR definition fail to update try reinstalling the Symantec client or upgrade to a newer version.
+To resolve this issue ensure that the WTR definitions on the Symantec client are updated to 10/16/2019 r100 or newer. If for some reason the WTR definition fail to update try reinstalling the Symantec client or upgrade to a newer version. If these steps fail try testing Citrix access with Symantec uninstalled.
 ***
 ## Combine text from two or more cells in Microsoft Excel into one cell
 It is possible to combine data from multiple cells into a single cell using the Ampersand symbol (&) or the CONCAT function.
