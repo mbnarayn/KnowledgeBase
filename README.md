@@ -24,6 +24,8 @@ NPS Extension for Azure MFA:  CID: 1fd39a1a-34b9-47e6-a66a-ed7e47c30e0a :Excepti
 To resolve this error navigate to Azure Active Directory > Enterprise Applications on the Azure Portal and find the below applications. Both applications will have their properties set to No for the attribute "Enabled for users to sign-in", changing this to yes for both applications will resolve this issue.
 
 Azure Multi-factor Auth Client
+
 Azure Multi-factor Auth Connector
 
-![hhjkhlj](https://github.com/mbnarayn/KnowledgeBase1/blob/master/test.jpg)
+
+![](https://github.com/mbnarayn/KnowledgeBase/blob/master/NPS%20Extension%20for%20Azure%20MFA.png)
