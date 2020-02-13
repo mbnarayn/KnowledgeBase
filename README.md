@@ -40,7 +40,7 @@ Name: IP_WHITELIST
 Type: string
 Value: 192.168.1.1;192.168.1.2
 
-Replace IP addresses in the above examples with the IP addresses of your devices (RADIUS Client) from which the requests originate.
+Replace IP addresses in the above example with the IP addresses of your devices (RADIUS Client) from which the requests originate.
 
 It is probably best to handle all non MFA requests via a different NPS server. However, if that is not an option this method is a decent alternative.
 ***
