@@ -12,9 +12,9 @@ Replace "WiFi with the name of the network interface. This can be obtained by ru
 netsh interface ipv4 show interface
 ```
 
-## Azure MFA Integration with NPS Extension Installed on NPS Server
+## Authentication Issues with NPS Extension for Azure MFA on NPS Server
 
-Microsoft documentation around the installation and configuration of NPS Extension of Azure appears to be missing a couple of steps. This results in an error when attempting to request MFA authorisation for Azure.
+Microsoft documentation around the installation and configuration of NPS Extension for Azure MFA appears to be missing a couple of steps. This results in an error when attempting to request MFA authorisation for Azure.
 
 The error appears in the Microsoft-AzureMfa-AuthZ/AuthZAdminCh Log on Event Viewer. The error will be along the lines of below:
 
