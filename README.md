@@ -70,9 +70,13 @@ It is possible to combine data from multiple cells into a single cell using the 
 
 1. Select the next cell you want to combine and press enter. 
 
-An example formula is:
+The example below adds a space between the cell values:
 ```
 =A4&" "&B4&" "&C4&" "&D4&" "&E4
+```
+The example below adds a comma between the cell values without spaces:
+```
+=A16&","&B16&","&C16&","&D16&","&E16&","&F16
 ```
 
 # Combine data using the CONCAT function
@@ -86,9 +90,9 @@ An example formula is:
 
 1. Close the formula with a parenthesis and press Enter
 
-An example formula is
+The example below adds a space between the cell values:
 ```
-=CONCAT(A2, " Family")
+=CONCAT(A21," ",B21, " ",C21," ",D21," ",E21)
 ```
 
 
