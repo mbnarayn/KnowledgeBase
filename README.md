@@ -44,5 +44,19 @@ Replace IP addresses in the above examples with the IP addresses of your devices
 
 It is probably best to handle all non MFA requests via a different NPS server. However, if that is not an option this method is a decent alternative.
 ***
+## Citrix Clients Fail to Connect with Symantec Web Security Serivice (WSS) Proxy or Web Traffic Redirection
+Citrix Receiver client, and Citrix Workspace connections fail when the computer is configured to use the Web Security Service (WSS) through the Symantec Endpoint Protection (SEP) client Web Traffic Redirection (WTR) feature. The cause is Citrix client connections sent through the WSS via WTR contain authentication header information that the Citrix server may reject.
+
+You may get one of the errors below or something similar
+
+> Unable to launch your application. Contact your help desk with the following information:
+Cannot connect to the Citrix XenApp server.Can't assign requested address
+
+> Unable to connect to the server. Contact your system administrator with the following error: The namelength argument is incorrect (Socket Error 10014)
+
+> Unable to connect to the server. Contact your system administrator with the following error: Socket operation on non-socket (Socket Error 10038)
+
+To resolve this issue ensure that the WTR definitions on the Symantec client are updated to 10/16/2019 r100 or newer. If for some reason the WTR definition fail to update try reinstalling the Symantec client or upgrade to a newer version.
+***
 
 
