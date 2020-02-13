@@ -30,3 +30,10 @@ To resolve this error navigate to Azure Active Directory > Enterprise Applicatio
 The screenshots below show the changes that need to be made.
 
 ![](https://github.com/mbnarayn/KnowledgeBase/blob/master/NPS%20Extension%20for%20Azure%20MFA.png)
+***
+## Bypass MFA for Authentication Requests from Specific Sources on NPS Server with NPS Extension for Azure MFA
+It is important to understand that the ‘NPS Extension for MFA’ is designed to take-over all requests that are handled by the MFA server, meaning those requests that can’t support MFA will simply fail. To overcome this restriction we have to make a registry change to whitelist the IP addresses of all Meraki access points, with this whitelist in place, authentication requests originating from these access points will automatically bypass the MFA extension.
+
+Below is the registry key that needs to be edited on the NPS server, the IP addresses of all Meraki Access points will need to be added to this registry key going forward.
+
+
