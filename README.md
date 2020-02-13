@@ -61,7 +61,7 @@ To resolve this issue ensure that the WTR definitions on the Symantec client are
 ## Combine text from two or more cells into one cell
 It is possible to combine data from multiple cells into a single cell using the Ampersand symbol (&) or the CONCAT function.
 
-# Combine data with the Ampersand symbol (&)
+### Combine data with the Ampersand symbol (&)
 1. Select the cell where you want to put the combined data.
 
 1. Type = and select the first cell you want to combine.
@@ -79,7 +79,7 @@ The example below adds a comma between the cell values without spaces:
 =A16&","&B16&","&C16&","&D16&","&E16&","&F16
 ```
 
-# Combine data using the CONCAT function
+### Combine data using the CONCAT function
 1. Select the cell where you want to put the combined data.
 
 1. Type =CONCAT(
