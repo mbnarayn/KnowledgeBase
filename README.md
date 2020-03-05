@@ -96,7 +96,17 @@ The example below adds a space between the cell values:
 ```
 ***
 
+### How To Delete User Profile in Windows 10
 
+- Open the Run dialog and execute the command SystemPropertiesAdvanced
+- Under User Profiles, click Settings...
+- Now delete the User Profile that you would like to remove
+
+In Windows 10 this automatically deletes the Profile folder for the user from C:\Users and also deletes the associated entry for the user from the below Registry key.
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList
+
+However in older versions of Windows, the Profile folder and the Registry key may have to be deleted manually.
 
 
 
