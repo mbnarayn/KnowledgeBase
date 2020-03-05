@@ -96,7 +96,7 @@ The example below adds a space between the cell values:
 ```
 ***
 
-### How to delete a User Profile in Windows 10
+### How to delete a User's Profile in Windows 10
 
 - Open the Run dialog and execute the command SystemPropertiesAdvanced
 - Under User Profiles, click Settings...
