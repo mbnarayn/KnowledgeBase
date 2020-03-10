@@ -108,6 +108,25 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList
 
 However in older versions of Windows, the Profile folder and the Registry key may have to be deleted manually.
 
+***
+## OneDrive (Personal) vs OneDrive for Business
+
+OneDrive is a personal cloud storage service (similar to the likes of Google Drive and Dropbox) from Micrsoft for you to store your files online and access them later from anywhere and any device. OneDrive for Business is first a synchronization tool. Either by installing Office 365, Office 2013 or later on your computer or through a standalone installer, you would install OneDrive for Business (Groove.exe). It’s a tool that evolved from Groove and allows you to synchronize offline the files you need to work with. However, through the evolution of the SharePoint brand and the continuing efforts made by Microsoft to compete on the cloud market, OneDrive for Business has become a whole lot more. For those of us that came from the SharePoint world, we saw another feature come time and time again but never be quite successful, My Sites. My Sites on SharePoint provided a user with his/her own personal site to store documents, and at the time touted to be a replacement for My Documents. With SharePoint 2013, they removed the name My Site for this feature and branded it with the name of the synchronization tool itself, OneDrive for Business. 
+
+Technically, OneDrive for Business is a synchronization feature offered by SharePoint. But as a brand, it’s a professional version of the OneDrive personal storage solution. Contrary to its personal counterpart though, OneDrive for Business is also available On-Premises, on an organizations’ own servers. Because it uses SharePoint, it also provides more administration options for working with documents. OneDrive for Business uses SharePoint to give each member of your team a place to store documents and collaborate with others. It doesn't require being on the cloud, and can be installed on your servers.
+
+***
+## OneDrive for Business Sync Apps
+
+For users of Office 365 there are a couple of apps currently available to sync files from OneDrive for Business, the OneDrive for Business sync app (Groove.exe) and the new OneDrive sync app (OneDrive.exe). Either by installing Office 365, Office 2013 or later on your computer or through a standalone installer, you would install OneDrive for Business (Groove.exe). The new OneDrive sync app (OneDrive.exe) is the recommended option if you are using Office 365 SharePoint Online. The new OneDrive sync app does not support on-premises locations in SharePoint 2016 or earlier and only supports SharePoint Server 2019.
+
+When users who are syncing files with the previous OneDrive for Business sync app (Groove.exe) sign in to the new OneDrive sync app (OneDrive.exe), the following things happen:
+
+If the new OneDrive sync app can take over syncing a library, the previous sync app stops syncing it and the new OneDrive sync app takes over syncing it without re-downloading the content. If the new OneDrive sync app can't sync the library, the previous sync app continues to sync it. If a library requires checkout or has required columns or metadata, it will be synced read-only.
+
+The previous sync app stops running and removes itself from automatic startup, unless it's still syncing libraries that the new OneDrive sync app can't sync.
+
+
 
 
 
