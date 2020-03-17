@@ -108,6 +108,10 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList
 
 However in older versions of Windows, the Profile folder and the Registry key may have to be deleted manually.
 
+Newer versions of Windows 10 now have a Registry Address Bar so it is possible to navigate straight to the key by pasting the Registry Path as shown below.
+
+![](https://github.com/mbnarayn/KnowledgeBase/blob/master/RegistryAddressBar.png)
+
 ***
 ## OneDrive (Personal) vs OneDrive for Business
 
