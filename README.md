@@ -130,6 +130,22 @@ If the new OneDrive sync app can take over syncing a library, the previous sync 
 
 The previous sync app stops running and removes itself from automatic startup, unless it's still syncing libraries that the new OneDrive sync app can't sync.
 
+***
+## Computer Accounts and Active Directory Tombstone Lifetime
+
+There is no problem of having workstations disconnected from the domain for longer than 30 days. The tombstone lifetime only applies to domain controllers and not workstations. The machine password is set to change every 30 days, but there is usually no problem even if a machine has been offline for several months, it will continue to work, no matter how long it has been since its machine account password was initiated and changed. The machine account passwords as such do not expire in Active Directory as the machine account password changes are driven by the client computer and not the domain controllers. As long as no one has disabled or deleted the computer account, nor tried to add a computer with the same name to the domain, (or some other destructive action), the computer will continue to work no matter how long it has been since its machine account password reset was initiated and changed. If the machine was unable to communicate with a domain controller, the client doesn’t try to change its password. For example, if it was a laptop running at home with no VPN for 4 months, the laptop would never change its own machine password.  The machine will initiate the password change next time it will be connected to the domain.
+
+If machine account password problems are encountered, they're typically due to the disabling or deletion of the machine account or an attempt to add a machine with the same name to the domain. In these cases, you can use the netdom.exe command line utility with the resetpwd switch to reset the machine account’s password. Tombstone lifetime can however affect a domain controllers if itself has been disconnected for longer than the tombstone lifetime. This is because the directory service cannot replicate with a domain controller whose last replication has exceeded the tombstone lifetime.
+
+***
+## Override Group Policies with Intune Policies
+
+By default Group Policy takes precedence if there is a conflict however it is possible to configure Intune to override some Group Policies. The CSP ControlPolicyConflict/MDMWinsOverGP policy can be used to ensure that MDM policy wins over GP when policy is configured on MDM channel. Added in Windows 10 version 1803, this policy allows the IT admin to control which policy will be used whenever both the MDM policy and its equivalent Group Policy (GP) are set on the device. However it can only override policies in the Policy CSP. It does not apply to other MDM settings with equivalent GP settings that are defined on other configuration service providers.
+
+https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-controlpolicyconflict
+
+A list of CSPs are available here https://docs.microsoft.com/en-us/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers. All Windows Update settings https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-updateserviceurl are part of the Policy CSP.
+
 
 
 
