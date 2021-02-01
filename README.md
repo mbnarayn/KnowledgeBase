@@ -169,6 +169,12 @@ Set-Mailbox -Identity joe.bloggs@domain.com -DeliverToMailboxAndForward $true -F
 The above command also works for Shared Mailboxes.
 Email forwarding to external addresses cannot be configured via the GUI. Also it not possible to view the forwarding from the GUI when using this method.
 
+***
+## Remove Duplicates in Excel
 
+When you use the Remove Duplicates feature, the duplicate data will be permanently deleted. Before you delete the duplicates, it’s a good idea to copy the original data to another worksheet so you don’t accidentally lose any information.
 
+Click Data > Remove Duplicates, and then Under Columns, check or uncheck the columns where you want to remove the duplicates.
+
+![](https://github.com/mbnarayn/KnowledgeBase/blob/master/RemoveDuplicatesExcel.jpg)
 
