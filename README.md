@@ -8,7 +8,7 @@ Run the following command by from an elevated command prompt:
 netsh interface ipv4 set subinterface “WiFi” mtu=1406 store=persistent
 ```
 
-Replace "WiFi with the name of the network interface. This can be obtained by running the following command:
+Replace "WiFi" with the name of the network interface. This can be obtained by running the following command:
 ```
 netsh interface ipv4 show interface
 ```
