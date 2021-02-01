@@ -166,6 +166,7 @@ Now to forward email for a user to an external email address as well as deliver 
 ```
 Set-Mailbox -Identity joe.bloggs@domain.com -DeliverToMailboxAndForward $true -ForwardingSMTPAddress Joe.Bloggs@externaldomain.com
 ```
+The above command also works for Shared Mailboxes.
 Email forwarding to external addresses cannot be configured via the GUI. Also it not possible to view the forwarding from the GUI when using this method.
 
 
