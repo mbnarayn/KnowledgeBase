@@ -146,6 +146,27 @@ https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-contro
 
 A list of CSPs are available here https://docs.microsoft.com/en-us/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers. All Windows Update settings https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-updateserviceurl are part of the Policy CSP.
 
+***
+## Setting Up Exchange Email Forwarding for Mulitple Users to External Email Address
+
+By default to forward mail externally for an Exchange Mailbox User you must create a Contact. If you configure email forwarding to an external email address without creating a mail contact the forwarding will not work.
+
+To set up forwarding to an external email address without creating a contact, the Exchange Administrator will need to add a remote doamin using the command below:
+
+```
+New-RemoteDomain -Name ExternalDomain -DomainName externaldomain.com
+```
+
+Once you have added the remote domain, run the below command to check that Auto Forward is enabled:
+```
+Get-RemoteDomain ExternalDomain | Select DomainName, AutoForwardEnabled 
+```
+Now to forward email for a user to an external email address as well as deliver a copy to their primary mailbox run the command below:
+
+```
+Set-Mailbox -Identity joe.bloggs@domain.com -DeliverToMailboxAndForward $true -ForwardingSMTPAddress Joe.Bloggs@externaldomain.com
+```
+Email forwarding to external addresses cannot be configured via the GUI. Also it not possible to view the forwarding from the GUI when using this method.
 
 
 
