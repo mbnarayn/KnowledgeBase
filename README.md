@@ -178,3 +178,29 @@ Click Data > Remove Duplicates, and then Under Columns, check or uncheck the col
 
 ![](https://github.com/mbnarayn/KnowledgeBase/blob/master/RemoveDuplicatesExcel.jpg)
 
+***
+## Azure AD Enterprise Applications
+
+Azure AD can be used as an Identity Provider for your custom applications. Azure AD must be configured to integrate with an application. In other words, Azure AD needs to know what apps are using it for identities. To make Azure AD aware of these apps and allow the app to use Azure AD as the identity provider the application needs to be added as an Enterprise Application on Azure. Enterprise Applications include an Azure AD app gallery which contains many popular applications that are already pre-configured to work with Azure AD as an identity provider. Apps from the gallery are pre-configured and can be set up with minimal effort. Alternatively it is also possible to add a custom application that is not published in the gallery and configure it to use Azure AD as the identity provider. You can use Azure AD as your identity system for just about any app. You can manually configure most apps for single sign-on if they aren't already in the gallery. Azure AD provides several SSO options. Some of the most popular are SAML-based SSO and OIDC-based SSO.
+
+
+***
+## Azure AD App Registrations
+
+An App Registration (Application) is an object that is included in Azure AD and describes the application. In fact, it is the definition of the application in which various elements are included, eg. Name, logo, publisher, Redirect URIs etc.
+
+You would create an Azure App Registration when you own the application. When you allow other/external Azure AD tenants to you use your application they will have to create an Enterprise Application to reference you App (App Registration) on their tenant.
+
+When you create an Azure App Registration on your Azure AD it also automatically adds a corresponding entry to you Enteprise Applications. An App Registration (Application) on its own cannot really do anything. After all, it is only a definition of the application. The Enterprise Application is what gives the App Registration an identity within a directory (including the home Azure AD directory). 
+
+An Enterprise application entry will have to be present in every Azure AD tenant where the Application (App Registration) will be used including the home Azure AD tenant on which the Application was registered (created).
+
+Only one application registration can exist for an application. But multiple enterprise applications can exist referencing the one applicatation registration across multiple tenants as well as the home tenant. (Many (enterprise applicationS) to One (application registration).
+
+, which can only be given rights within the same directory. The Enterprise Application (Service Principal) object is the instance of an app registration (application).
+
+Further your App Registration can be referenced by one or more Enterprise Applications in other Azure AD tenants.
+
+An application has one App Registration (Application) object in its home directory that is referenced by one or more Enterprise Applications (Service Principals) in each of the directories where it operates, including the home directory of the App Registration (Application).
+
+
