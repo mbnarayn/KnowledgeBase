@@ -203,4 +203,17 @@ Further your App Registration can be referenced by one or more Enterprise Applic
 
 An application has one App Registration (Application) object in its home directory that is referenced by one or more Enterprise Applications (Service Principals) in each of the directories where it operates, including the home directory of the App Registration (Application).
 
+A very easy explanation (that isn't 100% correct) is that you create a app registration for apps that you develop yourself. Enterprise Applications are added when you add third party appliations.
+
+One is the actual application object, where you configure the properties of your app (authentication, permissions, replyURIs and so on). The other one is a representation of the application within a directory, this can be your own directory or another company directory, etc. It "inherits" the settings from the application object and is what's used to grant consent/permissions to resources.
+
+https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-how-applications-are-added
+
+
+The "Enterprise Applications" blade contains the list of existing Service Principals in your tenant. Your own tenant applications will also be represented in the Enterprise Applications blade as Service Principals. Switch the Application Type filter to "All Applications" as here.
+
+Background of Multi-Tenant Apps
+Apps from third parties are classically multi-tenant Apps. Imagine, you are the app maker. This means, you only need to do the application registration once - as Multi Tenant App as shown above - in your own tenant which creates the Enterprise Application (Service Principal). When another tenant user wants to login to your app (identified by the world-wide unique App ID), they grant your app the permissions it requires - the "consent". If agreed, the Enterprise Application (Service Principal) is created in their tenant and this app effectively mirrors your application in their tenant. So one app can be used in multiple tenants.
+
+
 
