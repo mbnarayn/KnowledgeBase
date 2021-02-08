@@ -169,6 +169,12 @@ Set-Mailbox -Identity joe.bloggs@domain.com -DeliverToMailboxAndForward $true -F
 The above command also works for Shared Mailboxes.
 Email forwarding to external addresses cannot be configured via the GUI. Also it not possible to view the forwarding from the GUI when using this method.
 
+To view the forwarding SMTP address use the cmdlete below:
+
+```
+Get-Mailbox -Identity joe.bloggs@domain.com | Select Name, ForwardingSMTPAddress
+```
+
 ***
 ## Remove Duplicates in Excel
 
