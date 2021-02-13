@@ -222,4 +222,84 @@ Background of Multi-Tenant Apps
 Apps from third parties are classically multi-tenant Apps. Imagine, you are the app maker. This means, you only need to do the application registration once - as Multi Tenant App as shown above - in your own tenant which creates the Enterprise Application (Service Principal). When another tenant user wants to login to your app (identified by the world-wide unique App ID), they grant your app the permissions it requires - the "consent". If agreed, the Enterprise Application (Service Principal) is created in their tenant and this app effectively mirrors your application in their tenant. So one app can be used in multiple tenants.
 
 
+## What is the Difference Between DirectAccess and Always On VPN?
+
+Fundamentally they both provide seamless and transparent, always-on remote access. However, Always On VPN has a number of advantages over DirectAccess in terms of security, authentication and management, performance, and supportability. Windows 10 Always On VPN provides the same seamless, transparent, and always-on user experience as DirectAccess. A VPN connection is automatically established any time an authorized client has an active Internet connection; it does not require input from or interaction with the user (unless multifactor authentication is enabled, of course). Remote users access on-premises data and applications in the same familiar way, just as if they were at the workplace. Always On VPN is a Windows 10-only solution. However, unlike DirectAccess, client devices do not have to run the Enterprise edition to take advantage of it. Windows 10 Professional, along with all other SKUs, are now supported clients. Devices can be joined to an Active Directory domain, but this is not strictly required. Always On VPN clients can be standalone or, to take advantage of advanced features, they can be joined to Azure Active Directory.
+
+Windows 10 Always On VPN includes support for granular traffic filtering. DirectAccess lacks any native features to control access on a granular basis. It is possible to restrict access to internal resources by placing a firewall between the DirectAccess server and the LAN, but the policy would apply to all connected clients. Always On VPN allows administrators to restrict client access to internal resources in a variety of ways. In addition, traffic filter policies can be applied on a per-user or group basis. For example, users in accounting can be granted access only to their department servers. The same could be done for HR, finance, IT, and others.
+
+Windows 10 Always On VPN includes support for modern authentication and management, which results in better overall security. Always On VPN clients can be joined to an Azure Active Directory and conditional access can also be enabled. Modern authentication support using Azure MFA and Windows Hello for Business is also supported. Always On VPN is managed using Mobile Device Management (MDM) solutions such as Microsoft Intune.
+
+DirectAccess uses IPsec with IPv6, which must be encapsulated in TLS to be routed over the public IPv4 Internet. IPv6 traffic is then translated to IPv4 on the DirectAccess server. DirectAccess performance is often acceptable when clients have reliable, high quality Internet connections. However, if connection quality is fair to poor, the high protocol overhead of DirectAccess with its multiple layers of encapsulation and translation often yields poor performance. The protocol of choice for Windows 10 Always On VPN deployments is IKEv2. It offers the best security and performance when compared to TLS-based protocols. In addition, Always On VPN does not rely exclusively on IPv6 as DirectAccess does. This reduces the many layers of encapsulation and eliminates the need for complex IPv6 transition and translation technologies, further improving performance over DirectAccess.
+
+DirectAccess is a Microsoft-proprietary solution that must be deployed using Windows Server and Active Directory. It also requires a Network Location Server (NLS) for clients to determine if they are inside or outside the network. NLS availability is crucial and ensuring that it is always reachable by internal clients can pose challenges, especially in very large organizations. Always On VPN is infrastructure independent and can be deployed using Windows Routing and Remote Access (RRAS) or any third-party VPN device such as Cisco, Checkpoint, SonicWALL, Palo Alto, and more. Authentication can be provided by Windows Network Policy Server (NPS) or any third-party RADIUS platform.
+
+Windows 10 Always On VPN is the way of the future. It provides better overall security than DirectAccess, it performs better, and it is easier to manage and support.
+
+## What is DevOps?
+DevOps isn’t a process or a technology or a standard. At its essence, DevOps is a culture, a movement, a philosophy that delivers higher value to businesses and customers. DevOps is a set of practices that automates the processes between software development and IT teams, in order that they can build, test, and release software faster and more reliably. The concept of DevOps is founded on building a culture of collaboration between teams that historically functioned in relative siloes. DevOps implementations utilize technology especially automation tools that can leverage an increasingly programmable and dynamic infrastructure from a life cycle perspective. It unites agile, continuous delivery, automation, and much more, to help development and operations teams be more efficient and innovate faster. The promised benefits include increased trust, faster software releases, ability to solve critical issues quickly, and better manage unplanned work. 
+
+## What is Version Control?
+Version control systems are a category of software tools that help a software team manage changes to source code over time. Version control software keeps track of every modification to the code in a special kind of database. If a mistake is made, developers can turn back the clock and compare earlier versions of the code to help fix the mistake while minimizing disruption to all team members. Without version control, you're tempted to keep multiple copies of code on your computer. This is dangerous, as it's easy to change or delete a file in the wrong copy of code, potentially losing work. Version control systems solve this problem by managing all versions of your code but presenting you with a single version at a time.
+
+## What types of Version Control does Repos in Azure DevOps support?
+
+Azure Repos supports two types of version control: Git and Team Foundation Version Control (TFVC).
+
+- Git (distributed)
+
+Git is an open-source version control system and by far the most widely used modern version control system in the world today is Git. Git is a distributed version control system. Rather than have only one single place for the full version history of the software as is common in once-popular version control systems like CVS or Subversion (also known as SVN), in Git, each developer has a copy of the source repository on their dev machine. Every developer's working copy of the code is also a repository that can contain the full history of all changes. This allows developers to easily collaborate, as they can download a new version of the software, make changes, and upload the newest revision. Every developer can see these new changes, download them, and contribute.
+
+- TFVC (centralized)
+
+Team Foundation Version Control (TFVC) is a centralized version control system. Typically, team members have only one version of each file on their dev machines. Historical data is maintained only on the server. Branches are path-based and created on the server.
+
+## What is CI/CD?
+CI and CD are two acronyms that are often mentioned when people talk about modern development practices. CI stands for continuous integration but CD can either mean continuous delivery or continuous deployment.
+
+- Continuous Integration
+
+Developers practicing continuous integration merge their changes back to the main branch as often as possible. The developer's changes are validated by creating a build and running automated tests against the build. By doing so, you avoid the integration hell that usually happens when people wait for release day to merge their changes into the release branch.
+
+- Continuous Delivery
+
+Continuous delivery is an extension of continuous integration to make sure that you can release new changes to your customers quickly in a sustainable way. This means that on top of having automated your testing, you also have automated your release process and you can deploy your application at any point of time by clicking on a button.
+
+- Continuous Deployment
+
+Continuous deployment goes one step further than continuous delivery. With this practice, every change that passes all stages of your production pipeline is released to your customers. There's no human intervention, and only a failed test will prevent a new change to be deployed to production.
+
+## Azure Pipelines
+
+Azure Pipelines supports continuous integration (CI) and continuous delivery (CD) to constantly and consistently test and build your code and ship it to any target. You accomplish this by defining a pipeline.
+
+Continuous integration automates tests and builds for your project. CI helps to catch bugs or issues early in the development cycle, when they're easier and faster to fix. Items known as artifacts are produced from CI systems. They're used by the continuous delivery release pipelines to drive automatic deployments.
+
+- Increase code coverage
+- Build faster by splitting test and build runs
+- Automatically ensure you don't ship broken code
+- Run tests continually
+
+Continuous delivery automatically deploys and tests code in multiple stages to help drive quality. Continuous integration systems produce deployable artifacts, which includes infrastructure and apps. Automated release pipelines consume these artifacts to release new versions and fixes to the target of your choice.
+
+- Automatically deploy code to production
+- Ensure deployment targets have latest code
+- Use tested code from CI process
+
+![pipelines-image-designer.png](/.attachments/pipelines-image-designer-85266f2a-e6ba-4a76-b35f-703ef0507523.png)
+
+## Azure Artifacts vs Artifacts in Azure Pipelines
+
+Azure Artifacts is the new home of the Packages page under the Build and release page group in the previous navigation UX of Azure DevOps Services and TFS. With Azure Artifacts you can create and share Maven, npm, and NuGet package feeds from public and private sources with teams of any size. Azure Artifacts introduces the concept of multiple feeds that you can use to organize and control access to your packages. If you're familiar with using packages from NuGet.org or npmjs, you can think of those places each as a single feed. A note on terminology: you might also have heard feeds called package repositories or package sources, especially if you're an npm or Maven user.
+
+Artifacts in Azure Pipelines are different from Azure Artifacts. An Artifact in an Azure Pipeline is a collection of files or packages published by a run. Artifacts are made available to subsequent tasks, such as distribution or deployment.  Within Pipelines you can use build artifacts and pipeline artifacts to help store build outputs and intermediate files between build steps. You can then add onto, build, test, or even deploy those artifacts. 
+
+Build artifacts are the files that you want your build to produce. Build artifacts can be nearly anything that your team needs to test or deploy your app. For example, you've got .dll and .exe executable files and a .PDB symbols file of a .NET or C++ Windows app. 
+
+You can use pipeline artifacts to help store build outputs and move intermediate files between jobs in your pipeline. Pipeline artifacts are tied to the pipeline that they're created in. You can use them within the pipeline and download them from the build, as long as the build is retained. Pipeline artifacts are the new generation of build artifacts. They take advantage of existing services to dramatically reduce the time it takes to store outputs in your pipelines. Only available in Azure DevOps Services.
+
+
+
+
+
 
