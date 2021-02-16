@@ -147,35 +147,6 @@ https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-contro
 A list of CSPs are available here https://docs.microsoft.com/en-us/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers. All Windows Update settings https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-updateserviceurl are part of the Policy CSP.
 
 ***
-## Setting Up Exchange Email Forwarding to External Email Address Without Creating a Mail Contact
-
-By default to forward mail externally for an Exchange Mailbox User you must create a Contact. If you configure email forwarding to an external email address without creating a mail contact the forwarding will not work.
-
-To set up forwarding to an external email address without creating a contact, the Exchange Administrator will need to add a remote domain using the command below. Remote domains are SMTP domains that are external to your Microsoft Exchange organization.
-
-```
-New-RemoteDomain -Name ExternalDomain -DomainName externaldomain.com
-```
-
-Once you have added the remote domain, run the below command to check that Auto Forward is enabled.
-```
-Get-RemoteDomain ExternalDomain | Select DomainName, AutoForwardEnabled 
-```
-Now to forward email for a user to an external email address as well as deliver a copy to their primary mailbox run the command below:
-
-```
-Set-Mailbox -Identity joe.bloggs@domain.com -DeliverToMailboxAndForward $true -ForwardingSMTPAddress Joe.Bloggs@externaldomain.com
-```
-The above command also works for Shared Mailboxes.
-Email forwarding to external addresses cannot be configured via the GUI. Also it not possible to view the forwarding from the GUI when using this method.
-
-To view the forwarding SMTP address use the cmdlete below:
-
-```
-Get-Mailbox -Identity joe.bloggs@domain.com | Select Name, ForwardingSMTPAddress
-```
-
-***
 ## Remove Duplicates in Excel
 
 When you use the Remove Duplicates feature, the duplicate data will be permanently deleted. Before you delete the duplicates, it’s a good idea to copy the original data to another worksheet so you don’t accidentally lose any information.
