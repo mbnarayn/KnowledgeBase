@@ -257,7 +257,8 @@ Continuous delivery automatically deploys and tests code in multiple stages to h
 - Ensure deployment targets have latest code
 - Use tested code from CI process
 
-![pipelines-image-designer.png](/.attachments/pipelines-image-designer-85266f2a-e6ba-4a76-b35f-703ef0507523.png)
+![pipelines-image-designer.png] (https://github.com/mbnarayn/KnowledgeBase/blob/master/pipelines-image-designer.png)
+![](https://github.com/mbnarayn/KnowledgeBase/blob/master/RemoveDuplicatesExcel.jpg)
 
 ## Azure Artifacts vs Artifacts in Azure Pipelines
 
