@@ -18,11 +18,11 @@ Azure Private Endpoint is a network interface that connects you privately and se
 
 Azure Private Link enables you to access Azure PaaS Services (for example, Azure Storage and SQL Database) and Azure hosted customer-owned/partner services over a private endpoint in your virtual network.
 
-- Private Endpoint - Private Endpoint is the NIC with the Private IP on a Subnet
-- Private Link Resource - Private Link Resource is the service that is being presented via a Private Endpoint. Azure Blob Storage is an example of a Private Link Resource.
-- Private Link - Private Link is the component that connects the Private Endpoint to the Private Link Resource
-- Private Link Service - Azure Private Link service is the reference to your own service that is powered by Azure Private Link. Your service that is running behind Azure Standard Load Balancer can be enabled for Private Link access so that consumers to your service can access it privately from their own VNets. Your customers can create a private endpoint inside their VNet and map it to this service.
-- Private Link Alias - After you create a Private Link service, Azure will generate a globally unique named moniker called "alias" based on the name you provide for your service. You can share either the alias or resource URI of your service with your customers offline. Consumers can start a Private Link connection using the alias or the resource URI.
+- **Private Endpoint** - Private Endpoint is the NIC with the Private IP on a Subnet
+- __Private Link Resource__ - Private Link Resource is the service that is being presented via a Private Endpoint. Azure Blob Storage is an example of a Private Link Resource.
+- __Private Link__ - Private Link is the component that connects the Private Endpoint to the Private Link Resource
+- __Private Link Service__ - Azure Private Link service is the reference to your own service that is powered by Azure Private Link. Your service that is running behind Azure Standard Load Balancer can be enabled for Private Link access so that consumers to your service can access it privately from their own VNets. Your customers can create a private endpoint inside their VNet and map it to this service.
+- __Private Link Alias__ - After you create a Private Link service, Azure will generate a globally unique named moniker called "alias" based on the name you provide for your service. You can share either the alias or resource URI of your service with your customers offline. Consumers can start a Private Link connection using the alias or the resource URI.
 
 ### Private Endpoint Considerations
 - Optionally block public access completely with the firewall
