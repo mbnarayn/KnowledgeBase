@@ -53,5 +53,4 @@ Azure Sentinel helps detect and respond to an active or ongoing threat or attack
 Sentinel aggregates logs and events from a multitude of different sources and has a broader coverage of systems over ASC. From these logs and events it determines what kind of malicious activity has occurred or is occurring. It analyses the data and allows you to investigate as well as take actions upon it. Azure Security Center could also be one of the data sources for Azure Sentinel.
 
 Sentinel is SIEM and SOAR which uses intelligent security analytics and threat intelligence to effectively detect threats with built-in machine learning from Microsoft’s security analytics experts. Sentinel also helps automate threat response, using built-in orchestration and automation playbooks.
-![image](https://user-images.githubusercontent.com/40528035/137884757-9f1e1320-79aa-4185-92f3-fd03b2a6b30c.png)
 
