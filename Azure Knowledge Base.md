@@ -67,8 +67,6 @@ Azure Sentinel (SIEM and SOAR) sits outside of the Azure Monitor suite of produc
 ***
 ## Recommendations for Log Analytics Workspaces and Applications Insights
 
-Recommendations
-
 - Create separate Log Analytics Workspaces (LAW) per environment, one for each environment, Blue, Green, Dev and Test.
 
 - Share the Log Analytics Workspace within each environment amongst App Insights and other resources that support logging to a LAW.
