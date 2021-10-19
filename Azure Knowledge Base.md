@@ -42,4 +42,16 @@ And that’s what it takes to build a Private Link service.
 
 https://www.youtube.com/watch?v=vVDql7IKneg
 
-***
+*** Azure Security Center (Defender) vs Azure Sentinel
+
+Azure Security Center (ASC) helps identify risks and protect resources. The core theme for ASC is Identify and Protect (proactive).
+
+ASC has tools such as Secure Score that you help reduce the attack surface and make sure that resources are not vulnerable to attack.  ASC uses Azure Policy amongst others to make recommendations on what it means to be secure.
+
+Azure Sentinel helps detect and respond to an active or ongoing threat or attacks. The core theme of Sentinel is Detect and Respond (reactive). However it does include some proactive threat protection tools like Hunting. Sentinel sits on top a Log Analytics Workspace.
+
+Sentinel aggregates logs and events from a multitude of different sources and has a broader coverage of systems over ASC. From these logs and events it determines what kind of malicious activity has occurred or is occurring. It analyses the data and allows you to investigate as well as take actions upon it. Azure Security Center could also be one of the data sources for Azure Sentinel.
+
+Sentinel is SIEM and SOAR which uses intelligent security analytics and threat intelligence to effectively detect threats with built-in machine learning from Microsoft’s security analytics experts. Sentinel also helps automate threat response, using built-in orchestration and automation playbooks.
+![image](https://user-images.githubusercontent.com/40528035/137884757-9f1e1320-79aa-4185-92f3-fd03b2a6b30c.png)
+
