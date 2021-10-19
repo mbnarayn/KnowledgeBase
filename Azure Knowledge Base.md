@@ -42,7 +42,8 @@ And that’s what it takes to build a Private Link service.
 
 https://www.youtube.com/watch?v=vVDql7IKneg
 
-*** Azure Security Center (Defender) vs Azure Sentinel
+***
+## Azure Security Center (Defender) vs Azure Sentinel
 
 Azure Security Center (ASC) helps identify risks and protect resources. The core theme for ASC is Identify and Protect (proactive).
 
@@ -53,4 +54,14 @@ Azure Sentinel helps detect and respond to an active or ongoing threat or attack
 Sentinel aggregates logs and events from a multitude of different sources and has a broader coverage of systems over ASC. From these logs and events it determines what kind of malicious activity has occurred or is occurring. It analyses the data and allows you to investigate as well as take actions upon it. Azure Security Center could also be one of the data sources for Azure Sentinel.
 
 Sentinel is SIEM and SOAR which uses intelligent security analytics and threat intelligence to effectively detect threats with built-in machine learning from Microsoft’s security analytics experts. Sentinel also helps automate threat response, using built-in orchestration and automation playbooks.
+
+***
+## Azure Log Analytics Workspaces vs Monitor vs Application Insights vs Sentinel
+
+Logs or Log Analytics Workspaces is a service within Azure Monitor. Its a bit like the relationship of Office to Word, Monitor is the brand, and Logs/Log Analytics Workspaces is one of the solutions. The names Logs and Log Analytics Workspaces are used interchangeably in Azure Monitor. Technically Logs are stored in a Log Analytics Workspace. Azure Monitor lets your write and run Kusto queries to analyse Logs held within a Log Analytics Workspace.
+
+Application Insights is another product within the Azure Monitor suite. Azure Application helps analyse telemetry from Azure App Services to proactively understand performance and identify issues. Applications Insights uses a Log Analytics Workspace to store its data.
+
+Azure Sentinel (SIEM and SOAR) sits outside of the Azure Monitor suite of products but it requires a Log Analytics Workspace. Sentinel works in tandem with a Log Analytics Workspace, it has a focus on security and provides intelligent security analytics using Microsoft machine learning to effectively detect threats and automate threat response with built in orchestration and automation playbooks.
+
 
