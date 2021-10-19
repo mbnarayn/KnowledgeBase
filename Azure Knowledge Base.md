@@ -73,7 +73,7 @@ Azure Sentinel (SIEM and SOAR) sits outside of the Azure Monitor suite of produc
 
 - Create separate App Insights for development, test, and release versions, and for independent applications. Only use a single App Insight for all the App Services if they part of a single business system.
 
-- Multiple App Insights (in the event of multiple of App Services running with the same environment but not part of a single business system) within the same environment can share a LAW.
+- Multiple App Insights (in the event of multiple of App Services running within the same environment but not part of a single business system) within the same environment can share a LAW.
 
 - Enable Azure Sentinel on all LAWs.
 
