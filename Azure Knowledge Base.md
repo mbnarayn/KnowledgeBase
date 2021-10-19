@@ -64,4 +64,23 @@ Application Insights is another product within the Azure Monitor suite. Azure Ap
 
 Azure Sentinel (SIEM and SOAR) sits outside of the Azure Monitor suite of products but it requires a Log Analytics Workspace. Sentinel works in tandem with a Log Analytics Workspace, it has a focus on security and provides intelligent security analytics using Microsoft machine learning to effectively detect threats and automate threat response with built in orchestration and automation playbooks.
 
+***
+## Recommendations for Log Analytics Workspaces and Applications Insights
+
+Recommendations
+
+- Create separate Log Analytics Workspaces (LAW) per environment, one for each environment, Blue, Green, Dev and Test.
+
+- Share the Log Analytics Workspace within each environment amongst App Insights and other resources that support logging to a LAW.
+
+- Create separate App Insights for development, test, and release versions, and for independent applications. Only use a single App Insight for all the App Services if they part of a single business system.
+
+- Multiple App Insights (in the event of multiple of App Services running with the same environment but not part of a single business system) within the same environment can share a LAW.
+
+- Enable Azure Sentinel on all LAWs.
+
+- Create Azure Storage Account for diagnostics per environment, one for each environment, Blue, Green, Dev and Test.
+
+- Create a Key Vault per environment, one for each environment, Blue, Green, Dev and Test.
+
 
