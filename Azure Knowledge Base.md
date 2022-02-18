@@ -1,4 +1,13 @@
 # Azure Knowledge Base
+
+***
+## Azure Cosmos DB Networking
+
+- Secure your Azure Cosmos DB account with virtual networks. This option uses Service Endpoints.
+- Private Endpoints uses a NIC with an IP from an actual subnet.
+- Even when Private Endpoints are enabled Public IP access is still possible via IP whitelisting.
+- Private Link doesn't prevent your Azure Cosmos endpoints from being resolved by public DNS. Filtering of incoming requests happens at application level, not transport or network level. This means a telnet connection to the FQDN of the CosmosDB would still appear to connect. 
+
 ***
 ## Azure Service Endpoint
 Service Endpoints were the first service introduced to allow locking down of multi-tenant services. Service Endpoints allow you to restrict access to your PaaS resources to traffic coming from your Azure Virtual Network. With Service Endpoints, the PaaS service is still separate to your vNet and traffic is leaving your virtual network to access the PaaS service. However, the PaaS service is configured to be able to identify traffic coming from your virtual network and allow that, without the need to configure public IP’s on your vNet to allow filtering.
