@@ -271,14 +271,34 @@ You can use pipeline artifacts to help store build outputs and move intermediate
 
 ## Azure DevOps - Pipelines - Terraform Remote State File Not Saving to Azure Storage Account
 
-When running either the new multistage build or the traditional release pipleline in Azure Devops to deploy resources to Azure via Terraform, the deployment completes but the remote state file is absent or does not save to the designated Azure Storage Account.
+When running either the new multistage build or the traditional release pipeline in Azure Devops to deploy resources to Azure via Terraform, the deployment completes but the remote state file is absent or does not save to the designated Azure Storage Account.
 
 To resolve this add the below configuration block within the top level terraform block.
 
 ```
 backend "azurerm" {}
 ```
+## Authentication and Authorization
+
+OAuth 2.0, stands for Open Authorization 2.0, is the de facto industry standard for online authorization.
+
+Allows one Website/App to access another Website/App on behalf of a user.
+
+Previous versions of OAuth 1.0 and 1.0a were much more complicated than OAuth 2.0. The biggest change in the latest version is that it’s no longer required to sign each call with a keyed hash.
+
+OAuth 2.0 provides consented access and restricts actions of what the client app can perform on resources on behalf of the user, without ever sharing the user's credentials.
+
+OAuth 2.0 is a protocol for authorization, while OpenID Connect and SAML are protocols for authentication. OAuth 2.0 can be used with either OpenID Connect or SAML.
+
+OpenID Connect is an authentication protocol that builds on top of OAuth 2.0. It provides a way for users to authenticate with a third-party service without having to enter their username and password. OpenID Connect uses the OAuth 2.0 protocol to exchange authorization codes between the user, the client, and the authorization server. The authorization server then issues an ID token to the client, which contains the user's identity information. The client can then use the ID token to authenticate the user with the third-party service.
+
+SAML is an authentication protocol that is independent of OAuth 2.0. It uses XML messages to exchange authentication information between a user's identity provider and a service provider.
+
+Which protocol you use depends on your specific needs. If you only need to authorize users to access a resource, then OAuth 2.0 is a good option. If you also need to authenticate users, then you can use OpenID Connect or SAML.
 
 
+What is the difference between authentication authorization and accounting?
+
+Usually, authorization occurs within the context of authentication. Once you have authenticated a user, they may be authorized for different types of access or activity. The final plank in the AAA framework is accounting, which measures the resources a user consumes during access.
 
 
